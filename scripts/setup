@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Updating pip and setuptools because some older versions don't recognize the
+# project setup correctly
+if [[ $1 != '--no-pip' ]]; then
+    pip install --upgrade pip
+fi
+pip install --upgrade setuptools
+
+# Installing USW  itself
+pip install --editable .
+
+# Installing tools and type hints
+pip install --upgrade mypy flake8 flake8-pyproject autopep8 isort pyinstaller
+pip install --upgrape types-requests

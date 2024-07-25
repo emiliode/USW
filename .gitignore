@@ -1,0 +1,12 @@
+.mypy_cache/
+.cache/
+/.venv/
+/USW.egg-info/
+__pycache__/
+/.vscode/
+/.idea/
+
+# pyinstaller
+/usw.spec
+/build/
+/dist/
